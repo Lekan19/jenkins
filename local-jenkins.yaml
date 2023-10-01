@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  jenkins:
+    hostname: jenkins
+    image: jenkins/jenkins:lts-jdk17
+    ports:
+      - 8080:8080
+    networks:
+      - default
+    volumes:
+      - jenkins_vol:/var/jenkins_home
+
+volumes:
+  jenkins_vol:
+    
